@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>My Blog</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video class="background-video" id="backgroundVideo" autoplay muted loop>
+            <source src="Video/Moon.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h2>Pengaruh IPTEK Terhadap Generasi Hari ini</h2>
+            <p></p>
+        </div>
+    </section>
+
+    <!-- Tombol Kontrol untuk Audio dan Video -->
+    <div class="controls">
+        <button id="audioToggle" onclick="toggleAudio()">Turn Audio Off</button>
+        <button id="videoToggle" onclick="toggleVideo()">Turn Video Off</button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are a fantasy website that offers a world of magic and mystery. Explore and discover the unknown.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: taktasahina781@gmail.com</p>
+                <p>Phone: 0858-1401-9781</p>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2024 Chakra.R Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Background Audio -->
+    <audio id="backgroundAudio" loop>
+        <source src="audio/videoplayback.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

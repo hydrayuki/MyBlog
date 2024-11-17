@@ -1,0 +1,180 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #fff;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Menghindari overflow horizontal */
+}
+
+/* --- Header --- */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan shadow untuk efek */
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #fff;
+    white-space: nowrap; /* Menghindari teks logo agar tidak membungkus */
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Pastikan hero section selalu memenuhi layar */
+    overflow: hidden; /* Hides anything outside this section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Menjaga posisi konten tetap terpusat */
+}
+
+/* Perbaiki Video supaya full screen */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar video memenuhi seluruh layar */
+    z-index: -1; /* Video di belakang konten */
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay untuk kontras teks */
+    z-index: 0;
+}
+
+/* Teks di dalam hero section */
+.hero-text {
+    position: relative;
+    z-index: 2; /* Teks di atas overlay */
+    text-align: left; /* Menentukan posisi teks ke kiri */
+    padding-top: 150px; /* Mengatur jarak atas */
+    padding-left: 20px; /* Memberi jarak dari kiri */
+    color: white;
+    margin-bottom: 100px; /* Agar teks tidak tertutup footer */
+    flex: 1;
+    padding-right: 20px; /* Agar teks tetap ada jaraknya di sisi kanan */
+}
+
+.hero-text h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: white;
+    margin-top: 15px;
+    padding: 0 20px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px; /* Mengurangi padding footer untuk lebih ringkas */
+    text-align: center;
+    margin-top: 50px;
+    position: relative; /* Memastikan footer tetap berada di bawah */
+    z-index: 5;
+    min-height: 80px; /* Mengatur tinggi minimum footer agar tidak terlalu tinggi */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 5px; /* Mengurangi padding dalam footer */
+}
+
+.footer-section h3 {
+    font-size: 16px; /* Mengurangi ukuran font di footer */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 12px; /* Mengurangi ukuran font untuk teks footer */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    font-size: 12px;
+    margin-top: 5px; /* Mengurangi margin footer-bottom */
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        margin-bottom: 10px; /* Menurunkan jarak antar footer-section */
+        text-align: center;
+    }
+
+    .footer-section h3 {
+        font-size: 14px; /* Ukuran font heading di footer menjadi lebih kecil */
+    }
+
+    .footer-section p, .footer-section ul {
+        font-size: 12px; /* Ukuran font di footer lebih kecil */
+    }
+
+    .footer-bottom {
+        font-size: 10px; /* Mengurangi ukuran font footer-bottom di hp */
+    }
+
+    .hero-text {
+        padding-left: 10px; /* Mengurangi jarak kiri pada perangkat mobile */
+        padding-right: 10px; /* Menambahkan ruang di sisi kanan */
+    }
+
+    /* Mengurangi tinggi footer */
+    footer {
+        padding: 10px 15px; /* Padding footer lebih kecil */
+        min-height: 60px; /* Mengurangi tinggi footer pada hp */
+    }
+}
